@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.ball-container {
+    background-color: #ddd;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ball-container > .ball {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius:100%;
+}
+
+.ball-container > .ball:hover {
+    cursor: pointer;
+}
+
+.ball {
+    position: absolute;
+}
