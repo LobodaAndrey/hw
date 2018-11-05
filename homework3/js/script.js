@@ -1,3 +1,5 @@
+// create char.
+
 function Character() {
 	this.health = 100;
 	this.happiness = 100;
@@ -11,6 +13,8 @@ var character = new Character(),
 	ranNum = Math.ceil(Math.random() * 5)
 startGame.addEventListener("click", start);
 
+
+// start the action
 function start() {
 
 character.name = prompt("What is the name of your new friend?", defaultNames[Math.floor(Math.random() * defaultNames.length)]);
@@ -24,6 +28,9 @@ character.cheerfulness = 100;
 var isAlive = true;
 
 ShowStats();
+
+//	create button actions
+
 
 feed.addEventListener("click", feedFunc);
 
@@ -70,8 +77,10 @@ function playFunc() {
 	return character;
 }
 
-function ShowStats() {
+//for live update of stats
 
+function ShowStats() {
+	// value 100 is max
 	for (var key in character) {
 		if (character[key] > 100) {
 			character[key] = 100;
@@ -92,6 +101,7 @@ function ShowStats() {
 }
 
 
+//decreasing of stats
 
 var timer = setInterval(function(){ 
 	character.health -=3
