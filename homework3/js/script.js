@@ -1,6 +1,14 @@
-var character = {},
+function Character() {
+	this.health = 100;
+	this.happiness = 100;
+	this.satiety = 100;
+	this.cheerfulness = 100;
+	var isAlive = true;
+};
+
+var character = new Character(),
 	defaultNames = ["Johnny", "Billy", "Tommy", "Randy", "Kenny"];
-	ranNum = Math.floor(Math.random() * 5)
+	ranNum = Math.ceil(Math.random() * 5)
 startGame.addEventListener("click", start);
 
 function start() {
@@ -102,12 +110,14 @@ var timer = setInterval(function(){
 	}
 
 	if (character.isAlive === false) {
-		alert("Oh my God, you killed hero! You bastard!");
+		alert("Oh my God, you killed hero! You bastard! Try to play 1 more time");
 		clearInterval(timer);
+		character = new Character();
+		return start();
 	};
 
 	ShowStats();
-	return character;
+
 
 }, 2500);
 
