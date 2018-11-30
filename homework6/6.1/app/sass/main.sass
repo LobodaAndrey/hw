@@ -1,0 +1,64 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+.container
+	width: 800px
+	height: 500px
+	background-color: #ddd
+
+.mySlider
+	margin: 0 auto
+	width: 400px
+	height: 300px
+	position: relative
+	background-color: #333
+	overflow: hidden
+
+.bttn-group
+	background-color: green
+	display: block
+	padding: 20px 
+	margin: 0 auto
+	text-align: center
+
+.slide-bttn 
+	margin: auto
+	width: 100px
+	padding: 10px 6px
+	background-color: #333
+	color: #fff
+	border-radius: 10px
+	cursor: pointer
+	&:hover
+		background-color: lighten(#333, 20%)
+
+.mySlider
+	flex-basis: 80%
+
+.animate
+	-webkit-transition-duration: 1s
+    -moz-transition-duration: 1s
+    -o-transition-duration: 1s
+    transition-duration: 1s
+    -webkit-transition-property: -webkit-transform
+    -moz-transition-property: -moz-transform
+    -o-transition-property: -o-transform
+    transition-property: transform
+
+
+img
+	position: relative
+	float: left
+	transform: translate(-200px)
+	left: 200px
+
+
+
+
+
+
+
+
+@import "media" // Всегда в конце
