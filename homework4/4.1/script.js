@@ -118,7 +118,7 @@ Array.prototype.mySort = function(fn) {
 };
 
 
-//Example of func which increase each element by 2
+//Example of sort func 
 
 function mySortFunc(a, b) {
 	if (a > b) {
