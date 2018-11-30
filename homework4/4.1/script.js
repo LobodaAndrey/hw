@@ -1,108 +1,134 @@
-// I dont know why I did it. Correct methods in testscr.js file
+var testArr = [1, 3, 7, 9, 15];
+
+// Create method myForEach
+Array.prototype.myforEach = function(fn) {
+	var arr = this;
+
+    for (var i = 0; i < arr.length; i++) {
+    	//каждый элемент массива пропускаем через функцию fn
+    	let el = arr[i];
+    	fn(el);	
+    }; 
+    return arr;
+};
+
+//example func
+function forEachFunc(el) {
+	el++;
+	console.log(el)
+}
+
+testArr.myforEach(forEachFunc);
 
 
-var testArr = [1, 3, 7, 9, 15],
-	myObj = {
-		myForEach: function(arr, func) {
-			for (var i = 0; i < arr.length; i++) {
-				if(!!func) {
-					var el = arr[i];
-					func(el); 
-				} else { //default func
-					console.log("no func picked");
-				}				
-			}
-		},
-		myMap: function(arr, func) {
-			var newArr = [];
+// _________________________________________
 
-			for (var i = 0; i < arr.length; i++) {
-				if(!!func) {
-					el = arr[i];
-					func(el);
-					newArr.push(el); 
-				} else { //default func
-						console.log("no func picked");
-					}
 
-			}
 
-			return newArr;
-		},
-		mySort: function(arr, func) {
-			for (var i = 1; i < arr.length; i++) {
-				var a = arr[i-1],
-					b = arr[i];
-				arr[i] = func(a, b);
-			}
-				return arr;
+//create method myFilter
 
-		},
-		myFilter: function(arr, func) {
-			var newArr = [];
+Array.prototype.myFilter = function(fn) {
+	var arr = this;
+	var newArr = [];
 
-			for (var i = 0; i < arr.length; i++) {
-				el = arr[i];
-				func(el);
-				if (!!func(el)) {
-					newArr.push(el);
-				}
-			}
-
-			return newArr;
-
-		},
-
-		myPush: function(arr, el) {
-			arr[arr.length] = el;
-			console.log(arr)
-			return arr;
+	for (var i = 0; i < arr.length; i++) {
+		let el = arr[i];
+		if (!!fn(el)) {
+			newArr.push(el);
 		}
 	};
+	console.log(newArr);
+	return newArr;
+};
+
+// For simple example we want to pick elements more than 5
+
+function filterFunc(el) {
+ 	if (el > 5) {
+ 		console.log("true")
+ 		return true;
+ 	} else {
+ 		console.log("false")
+ 		return false;
+ 	}
+ }
+
+testArr.myFilter(filterFunc);
+ 
+//  __________________________________________
 
 
 
-	//test func for foreach
-	function forEachFunc(el) {
-		console.log((el));
+// create method myMap
+
+Array.prototype.myMap = function(fn) {
+	var arr = this;
+	var newArr = [];
+
+	for (var i = 0; i < arr.length; i++) {
+		arr[i] = fn(arr[i])
+		newArr.push(arr[i]);
+	};
+	console.log(newArr);
+	return newArr;
+};
+
+
+//Example of func which increase each element by 2
+
+function myMapFunc(a) {
+	a+=2;
+	return a;
+}
+
+
+ testArr.myMap(myMapFunc)
+
+// _____________________________________
+
+
+
+
+// create method myPush
+
+Array.prototype.myPush = function(el) {
+	var arr = this;
+	arr[arr.length] = el;
+	return arr;
+};
+
+
+testArr.myPush(57)
+
+
+
+// ______________________________
+
+
+//create method mySort
+
+Array.prototype.mySort = function(fn) {
+	var arr = this;
+
+	for (var i = 0; i < arr.length; i++) {
+		arr[i] = fn(arr[i-1], arr[i]);
+	};
+	console.log(arr);
+	return arr;
+};
+
+
+//Example of func which increase each element by 2
+
+function mySortFunc(a, b) {
+	if (a > b) {
+		return a;
+	} else {
+		return b;
 	}
-
-	//test func for map
-	function mapFunc() {
-		el +=2;
-		return el;
-	}
-
-	//test func for filter 
-
-	function filterFunc(el) {
-		if (el > 5) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	function compareMax(a, b) {
-	  if (a > b) return a;
-	  if (a < b) return b;
-	}
-
-	// myObj.myForEach(testArr, forEachFunc)
-
-	// console.log(myObj.myMap(testArr, mapFunc));
-
-	// console.log(myObj.myFilter(testArr, filterFunc));
-
-	// myObj.myPush(testArr, 1488);
-
-	console.log(myObj.mySort(testArr, compareMax));
+}
 
 
-
-
-
-
-
+testArr.mySort(mySortFunc)
 
 
