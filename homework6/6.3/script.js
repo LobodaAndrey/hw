@@ -2,22 +2,25 @@
 
 // 1-st
 
-// function isPrime(n) {
-// 	if(n<2) return console.log(false);
-
-// 	for (let i = 1; i <= n; i++) {
-// 		if ((n%n)) {
-// 			console.log(true)
-// 		} else {
-// 			console.log(false)
-// 		}
-// 	};
-// }
-
-// isPrime(0)                          
-// isPrime(1)                          
-// isPrime(17)                         
-// isPrime(100)             
+let isInteger = (num) => {
+	return (num ^ 0) === num;
+	}
+	
+	let isPrime = num => {
+	if (num == 2) {
+	return true;
+	}
+	for (let i =2; i < num; i++) {
+	let result = num/i;
+	if (isInteger(result)) {
+	return false;
+	} else {
+	return true;
+	}
+	}
+	}
+	
+	console.log(isPrime(17));           
 
 //2-nd
 
@@ -35,4 +38,14 @@ factorial(1)                        // 1
 factorial(6)                        // 720
 
 //3-rd
-//test
+
+
+var fib = function f(n) {
+    return (n > 2) ? f(n - 1) + f(n - 2) : 1;
+  };
+
+
+console.log(fib(10));
+
+
+
