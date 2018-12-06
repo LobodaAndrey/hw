@@ -1,0 +1,47 @@
+@import "base"
+@import "vars"
+
+
+h1 
+  margin: 0 auto
+  padding: 25px
+
+#container
+  position: relative
+  width: 600px
+  height: 600px
+  background-color: #ddd
+  margin: 0 auto
+  border: 1px solid black
+
+.add__tag
+  display: block
+  background-color: #3e3
+  outline: none
+  border: 1px solid darken(#3e3, 35%)
+  border-radius: 5px
+  padding: 5px
+  margin: 0 auto
+  cursor: pointer
+
+.tag-wrapper
+  padding: 40px
+
+.tag
+  background-color: darken(#ddd, 30%)
+  width: 150px
+  height: auto
+  padding: 5px
+  margin: 5px
+  position: absolute
+  p
+   margin: 0
+  &:hover
+    cursor: pointer
+
+.deleteTag
+  display: none
+
+
+
+@import "media" // Всегда в конце
