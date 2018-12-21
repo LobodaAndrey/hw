@@ -1,0 +1,48 @@
+<div class="container-fluid">
+
+<div class="logo">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<app-header></app-header>
+
+<router-outlet>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <app-graph></app-graph>
+    </div>
+    <div class="col-md-4">
+      <pie-chart></pie-chart>
+    </div>
+    <div class="col-md-4">
+      <bar></bar>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="list" class="list_tab">
+        <list></list>
+      </div>
+    </div>
+  </div> 
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <lightbox></lightbox>
+        </div>
+        <div class="table">
+          <table-head></table-head>
+        </div>
+          <app-text></app-text>
+        </div>
+    </div>
+  </div>
+</router-outlet>
+
+  <app-footer></app-footer>
+
+  
