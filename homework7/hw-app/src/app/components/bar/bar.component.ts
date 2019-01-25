@@ -1,21 +1,14 @@
 import { Component } from '@angular/core';
 
-let x: number = undefined;
-console.log(x);
-x = null;
-console.log(x);
-x = 5;
-console.log(x);
-
 @Component({
-  selector: 'bar',
+  selector: 'app-bar',
   templateUrl: './bar.component.html',
   styleUrls: ['./bar.component.sass'],
 })
 
 export class BarComponent {
-  
-  public chartType: string = 'bar';
+
+  public chartType = 'bar';
 
   public chartDatasets: Array<any> = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'My First dataset' }
