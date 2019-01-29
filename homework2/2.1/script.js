@@ -1,24 +1,20 @@
-// Actually my knowledge wasnt enough to solve this task. I tried for a few days, but my solution was counting water twice at each column, so I was forced to find a similar method in google to solve this =(
+const arr1 = [6, 1, 4, 2, 2, 5, 0];
+const arr2 = [5, 3, 6, 7, 4, 0, 2];
+const arr3 = [4, 3, 5, 0, 2, 0, 2];
 
+function getAmountOfWater(arr) {
+    let max = Math.max.apply(null, arr),
+        sum = 0;
 
-var arr = [5, 2, 7, 4, 1, 3];
-
-function waterAmount(array) {
-    var max = Math.max.apply(null, array),
-        mySum = 0;
-
-        //found max point
-        console.log(max)
-
-    for (var i = 1; i <= max; i++) {
-        var inside = false,
+    for (let i = 1; i <= max; i++) {
+        let inside = false,
             gaps = 0;
         
-        for (var j = 0; j < arr.length; j++) {
+        for (let j = 0; j < arr.length; j++) {
             if (arr[j] >= i) {
                 if (inside) {
                     inside = false;
-                    mySum += gaps;
+                    sum += gaps;
                     j--;
                 } else {
                     inside = true;
@@ -30,7 +26,9 @@ function waterAmount(array) {
         }
     }
     
-    return mySum;
+    return sum;
 }
 
-console.log(waterAmount(arr))
+console.log(getAmountOfWater(arr1))
+console.log(getAmountOfWater(arr2))
+console.log(getAmountOfWater(arr3))
