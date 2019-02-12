@@ -33,5 +33,4 @@ function closeFunc(e) {
 	e.parentNode.parentNode.removeChild(e.parentNode);
 	total = document.getElementsByClassName('newToDo').length;
 	document.getElementById('total_amount').innerHTML = "<p>Total amount of toDo: " + total + "</p>";
-
 }
