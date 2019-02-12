@@ -15,11 +15,11 @@ let isPrime = num => {
 		let result = num/i;
 		if (isInteger(result)) {
 			return false;
-			} else {
-					return true;
-			}
+		} else {
+			return true;
 		}
 	}
+}
 	
 console.log(isPrime(17));
 console.log(isPrime(22));           
