@@ -6,10 +6,10 @@ let isInteger = (num) => {
 	return (num ^ 0) === num;
 };
 
-	let isPrime = num => {
-		if (num === 2) {
-			return true;
-		}
+let isPrime = num => {
+	if (num === 2) {
+		return true;
+	}
 
 	for (let i =2; i < num; i++) {
 		let result = num/i;
@@ -21,8 +21,8 @@ let isInteger = (num) => {
 		}
 	}
 	
-	console.log(isPrime(17));
-	console.log(isPrime(22));           
+console.log(isPrime(17));
+console.log(isPrime(22));           
 
 //2-nd
 
@@ -43,8 +43,8 @@ factorial(6)                        // 720
 
 let asd
 var fib = function f(n) {
-    return (n > 2) ? f(n - 1) + f(n - 2) : 1;
-  };
+  return (n > 2) ? f(n - 1) + f(n - 2) : 1;
+};
 
 
 console.log(fib(10));
@@ -73,8 +73,7 @@ let reverse = (str) => {
 	for (let i = str.length; i > 0; i--) {
 		newString.push(str.charAt(i-1));
 	}
-	console.log(newString.join(''));
-	
+	console.log(newString.join(''));	
 }
 
 reverse ("abcd")
@@ -103,8 +102,9 @@ let isPalindrome = (str) => {
 	function reverseString(str) {
 		if (str === "")
 			return "";
-		else
+		else {
 			return reverseString(str.substr(1)) + str.charAt(0);
+		}
 	}
 
 	str = str.replace(/\s+/g, '');
@@ -119,6 +119,7 @@ console.log("")
 console.log("")
 console.log("")
 console.log("")
+
 //  8. missing  
 
  let missing = (arr) => {
