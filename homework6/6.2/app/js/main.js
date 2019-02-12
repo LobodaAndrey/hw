@@ -1,13 +1,13 @@
 let addButton = document.getElementById('addbttn');
 let container = document.getElementById('container');
-let tagEl = document.querySelector('.tag-wrapper'); // Why only 1-st tag is working? When I type querySelectorAll, even 1-st tag stop working 
+let tagEl = document.querySelector('.tag-wrapper');
 function createNewTag() {
-		let tag = document.createElement('div');
-    tag.className = "tag";
-    tag.innerHTML = '<p>some Text</p>'
-    tag.style.left = Math.random()*400 + "px"
-    tag.style.bottom = Math.random()*350 + "px"
-    container.appendChild(tag);
+	let tag = document.createElement('div');
+  tag.className = "tag";
+  tag.innerHTML = '<p>some Text</p>'
+  tag.style.left = Math.random()*400 + "px"
+  tag.style.bottom = Math.random()*350 + "px"
+  container.appendChild(tag);
 };
 
 addButton.addEventListener("click", createNewTag);
