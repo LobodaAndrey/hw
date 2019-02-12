@@ -1,0 +1,21 @@
+<h3 class="login-header">Sign Up, please</h3>
+<br>
+<form class="login-form">
+  <mat-form-field class="example-full-width">
+    <input required matInput placeholder="Login" type="text">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <input required matInput placeholder="Password" type="password" >
+  </mat-form-field>
+  <!-- a is just for test, need to fix -->
+  <a href="/main"><button (click)="success()" type="submit" mat-raised-button color="primary">Sign Up</button></a>  
+</form>
+
+<div class="no-acc">
+  <p>You still have no account? <a class="main-link" href="register">register a new</a></p>
+  <p><a class="main-link" href="/">Back to home page</a></p>  
+</div>
+
+
+

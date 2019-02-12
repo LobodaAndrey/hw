@@ -1,0 +1,30 @@
+<div class="reg-wrapper">
+  <a href="/">Back to home</a>
+    <h3 class="center reg-header">Please, complete the form below to finish registration</h3>
+  <div class="reg-container">
+      <form [formGroup]="heroForm" class="reg-form" action="#">
+        <mat-form-field class="">
+          <input formControlName="login"  matInput placeholder="Login" value="">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="">
+          <input formControlName="password" type="text" matInput placeholder="Password" value="">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="">
+          <input formControlName="email"  type="email" matInput placeholder="Email" value="">
+        </mat-form-field>
+        <mat-form-field class="">
+          <input formControlName="name"  matInput placeholder="Name" value="">
+        </mat-form-field>
+        <mat-form-field class="">
+          <input formControlName="surname"  matInput placeholder="Surname" value="">
+        </mat-form-field>
+        
+        <br>
+        <br>
+        <button class="reg-bttn" type="submit" mat-raised-button color="primary">Register!</button>  
+      </form>
+    </div>
+
+</div> 

@@ -1,18 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { LineChartComponent } from './graphic/graphic.component';
-import { PieComponent } from './pie/pie.component';
-import { BarComponent } from './bar/bar.component';
-import { FooterComponent } from './footer/footer.component';
-import { TableComponent } from './table/table.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { ListComponent } from './list/list.component';
-import { LightboxComponent } from './lightbox/lightbox.component';
-import { TextComponent } from './text/text.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LineChartComponent } from './components/graphic/graphic.component';
+import { PieComponent } from './components/pie/pie.component';
+import { BarComponent } from './components/bar/bar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { TableComponent } from './components/table/table.component';
+import { ListComponent } from './components/list/list.component';
+import { TextComponent } from './components/text/text.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { TextComponent } from './text/text.component';
     FooterComponent,
     TableComponent,
     ListComponent,
-    LightboxComponent,
     TextComponent
   ],
   imports: [
