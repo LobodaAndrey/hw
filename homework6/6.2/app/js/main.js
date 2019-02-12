@@ -16,20 +16,19 @@ addButton.addEventListener("click", createNewTag);
 
 tagEl.onmousedown = function(e) {
 
-  var coords = getCoords(tagEl);
-  var shiftX = e.pageX - coords.left;
-  var shiftY = e.pageY - coords.top;
+  let coords = getCoords(tagEl);
+  let shiftX = e.pageX - coords.left;
+  let shiftY = e.pageY - coords.top;
   console.log(e.pageX, e.pageY,)
   tagEl.style.position = 'absolute';
   document.body.appendChild(tagEl);
   moveAt(e);
 
-  tagEl.style.zIndex = 1000; // над другими элементами
-
+  tagEl.style.zIndex = 10;
   function moveAt(e) {
     tagEl.style.left = Math.max(Math.min(e.pageX - shiftX), 0) + 'px';
-    if (tagEl.style.left > "740px") {tagEl.style.left = "740px"}
-    if (tagEl.style.left < "290px") {tagEl.style.left = "290px"}
+    if (tagEl.style.left > "640px") {tagEl.style.left = "640px"}
+    if (tagEl.style.left < "290px") {tagEl.style.left = "190px"}
     tagEl.style.top = Math.max(Math.min(e.pageY- shiftY), 0) + 'px';
     if (tagEl.style.top < "180px") {tagEl.style.top = "180px"}
     if (tagEl.style.top > "515px") {tagEl.style.top = "515px"}
@@ -52,7 +51,7 @@ tagEl.ondragstart = function() {
 };
 
 function getCoords(elem) {   // кроме IE8-
-  var box = elem.getBoundingClientRect();
+  let box = elem.getBoundingClientRect();
   return {
     top: box.top + pageYOffset,
     left: box.left + pageXOffset
