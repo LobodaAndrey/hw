@@ -7,7 +7,7 @@ let isInteger = (num) => {
 };
 
 	let isPrime = num => {
-		if (num == 2) {
+		if (num === 2) {
 			return true;
 		}
 
