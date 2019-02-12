@@ -1,7 +1,6 @@
 @import "_fonts"
-
+@import "_base"
 .container
-	padding: 100px
 	max-width: 100%
 .welcome_msg
 	font-family: Sympathy, sans-serif
@@ -9,7 +8,7 @@
 	text-align: center
 	margin: 0 auto
 .taskApp
-	margin: 30px
+	margin: 5px 0
 	padding: 40px
 	background-color: #eee
 	max-width: 100%
@@ -28,9 +27,13 @@
 	max-width: 100%
 
 .bttn-todo
-	margin: 30px
-	max-width: 100px
-	border: none
+	margin: 15px
+	font-size: 25px
+	font-weight: bold
+	color: #555
+	width: 50px
+	height: 50px
+	border: 1px solid #555
 	outline: none
 	border-radius: 100%
 	background-color: #ccc
@@ -46,10 +49,13 @@
 	cursor: pointer
 
 .newToDo
+	border-radius: 10px
+	margin: 5px
 	display: flex
 	align-items: center
-	padding: 20px
+	padding: 10px 20px
 	font-size: 20px
+	transition: background-color .5s
 	&:hover
 		.close
 			display: block

@@ -22,8 +22,37 @@
   font-weight: 800;
   src: url("../fonts/Slimamif.ttf"); }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  *:before, *:after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.75;
+  font-family: raleway-grid, sans-serif;
+  overflow-x: hidden;
+  opacity: 1;
+  color: #333; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.text-center {
+  text-align: center; }
+
 .container {
-  padding: 100px;
   max-width: 100%; }
 
 .welcome_msg {
@@ -33,7 +62,7 @@
   margin: 0 auto; }
 
 .taskApp {
-  margin: 30px;
+  margin: 5px 0;
   padding: 40px;
   background-color: #eee;
   max-width: 100%;
@@ -65,9 +94,13 @@
   max-width: 100%; }
 
 .bttn-todo {
-  margin: 30px;
-  max-width: 100px;
-  border: none;
+  margin: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #555;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #555;
   outline: none;
   -webkit-border-radius: 100%;
           border-radius: 100%;
@@ -84,6 +117,9 @@
   cursor: pointer; }
 
 .newToDo {
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  margin: 5px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -92,8 +128,11 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
-  font-size: 20px; }
+  padding: 10px 20px;
+  font-size: 20px;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s; }
   .newToDo:hover .close {
     display: block; }
 

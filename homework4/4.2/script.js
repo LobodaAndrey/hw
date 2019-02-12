@@ -1,33 +1,39 @@
-// В этом задании комментарии на русском, т.к. даже на нём мне сложно описать, что происходит.
-
 function walkingArr(X, Y, x0, y0) {
 	var startPosition = [x0, y0],
 		output = [],
-		//amount of elements
-		N = 0;
-
-		//Вставляем начальную точку в output;
+		N = 0; //total amount of cells
+		
+		//add start position to output;
 		output.push(startPosition)
+		let movelength = 1;
+		//start the loop
+		while (N < X*Y) {
 
-		//N - общее число ячеек, которое должно быть равно X*Y, до тех пор идёт цикл.
-
-		while (N <= X*Y) {
-		//Далее, я понимаю, что через каждые две смены направления, "длина" будет увеличиваться на один, но как это реализовать, не совсем понимаю, была идея создать 4 переменных с направалениями и постепенно увеличивать их длину по спирали, а также сделать так, чтобы на каждое направление происходило соответсвующее действие
-			if(N%2 === 0) {
-				x0 = x0 + 1;
-			}	else {
-				y0 = y0 + 1;
+			if( N%2 === 0 && N > 0 ) {
+				movelength++;
 			};
 
-			// Если текущие коорджинаты не вылазят за пределы XY, то добавляем элемент в output
-			if ((x0 <= X) || (y0 <= Y)) {		
+			if(N%4 === 0) {
+				x0 += movelength;
+			}
+			if(N%4 === 1) {
+				y0 -= movelength;
+			}
+			if(N%4 === 2) {
+				x0 -= movelength;
+			}
+			if (N%4 === 3) {
+				y0 += movelength;
+			}
+			// If current coordinates are inside of XY, we add this element to output
+			if ((x0 <= X) && (y0 <= Y)) {		
 				output.push([x0, y0]);
 			}
+			//And move to the next cell
 			N++;
 		}
-		console.log(output)
 		return output;
 }
 
-walkingArr(2, 4, 0, 0);
+console.log(walkingArr(4, 2, 0, 0));
 
