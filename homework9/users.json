@@ -1,0 +1,28 @@
+{
+  "users" : [{
+      "id": 1,
+      "name": "Andrey",
+      "balance": 100
+    },
+    {
+      "id": 2,
+      "name": "Lida",
+      "balance": 100
+    },
+    {
+      "id": 3,
+      "name": "Bill",
+      "balance": 100
+    },
+    {
+      "id": 4,
+      "name": "Adam",
+      "balance": 100
+    },
+    {
+      "id": 5,
+      "name": "John",
+      "balance": 100
+    }
+  ]
+}
